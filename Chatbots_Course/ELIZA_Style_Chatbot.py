@@ -37,11 +37,10 @@ def send_message(message):
     response = respond(message)
     # Print the bot template including the bot's response.
     print(bot_template.format(response))
-    print('\n')
 
 # Define match_rule()
 def match_rule(rules, message):
-    response, phrase = "default", None
+    response, phrase = "I am not programmed to understand that..", None
     
     # Iterate over the rules dictionary
     for pattern, responses in rules.items():
@@ -85,9 +84,19 @@ def respond(message):
     return response
 
 # Send the messages
-print('Running_test_messages...', '\n')
+print('RUNNING TEST MESSAGES...', '\n')
 send_message("do you remember your last birthday")
 send_message("do you think humans should be worried about AI")
 send_message("I want a robot friend")
 send_message("what if you could be anything you wanted")
+
+print('\n')
+print('TESTS PASSED')
+print('Live input mode starting..', '\n')
+
+print('Hi I am ELIZA! Send me a message!')
+while True:
+    message = input('please send me a message:')
+    send_message(message)
+
 
